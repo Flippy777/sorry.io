@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry for everything</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+
+    .text-box {
+        border: 3px solid #aaa;
+        border-radius: 5px;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        width: 600px;
+        height: 300px;
+      }
+      
+      .text-box p {
+        margin: 0;
+        text-align: left;
+      }
+      
+      .fake-btn {
+        background-color: rgb(21, 161, 237);
+        border-radius: 3px;
+        bottom: -50px;
+        color: #fff;
+        padding: .5rem 1rem;
+        position: absolute;
+        right: 5px;
+      }
+</style>
+</head>
+<body>
+
+<div class="text-box">
+    <p id="typed-text"></p>
+</div>
+
+<script>
+const text = "Za aku pengen ngomong, sebener e aku kagum ambe awamu seh mulai awal ketemu p2kk aku ngomong ngene biar g janggal ae seh ndek aku, mungkin aku mulai penasaran pas awmu nangis gara2 cerito pas p2kk seh wkwk (becanda yee). makasih ya buat ws pernah main nak malang meskipun waktu e singkat. aku kagum ambe awamu tapi gae motivasiku kok cek berubah gae seng lebih baik, kek contoh e pas smt 2 wingi kan ipku elek bgt pas aku buka khsmu bagus bangett anjoyy hampirr 4. tapi iku tak buat motivasi kok cek aku semakin berkembang dan akhir e ip smt 3ku hampir 4 pisan (meskipun onok galau e pas awamu mutusno ws ngga kuliah maneh sebab onok musibah ndek awamu).sebener e aku kaget sih pas awamu wingi ngomong due tunangan ws an, tapi congrast ya lancar sampek hari H. mungkin cukup sampek kene ae kagumku nak awamu. minal aidzin wal faidzin maaf nek selama iki aku due salah nak awamu titip salam gae mamamu ya";
+const typedTextElement = document.getElementById("typed-text");
+
+let index = 0;
+
+function typeText() {
+    if (index < text.length) {
+        typedTextElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 50); // Adjust the speed here (milliseconds)
+    }
+}
+
+typeText();
+</script>
+
+</body>
+</html>
